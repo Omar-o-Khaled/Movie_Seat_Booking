@@ -1,0 +1,111 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: #0e1133;
+    color: white;
+    font-family: sans-serif;
+}
+.container{
+    width: 350px;
+    text-align: center;
+    perspective: 1000px;
+}
+.movieSelection{
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 20px;
+}
+.movieSelection .moviePrice{
+    padding: 8px;
+    border-radius: 4px;
+    appearance: none;
+    font-size: 14px;
+    cursor: pointer;
+}
+.movieSelection .moviePrice:focus-visible{
+    outline:none;
+}
+.options{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: black;
+    padding: 0px 6px;
+    border-radius: 10px;
+}
+.options .optInfo{
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+.default,
+.selected,
+.occupied
+{
+    width: 20px;
+    height: 20px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition-duration: .5s;
+}
+.options .default,
+.options .selected,
+.occupied{
+    cursor: default !important;
+}
+.default{
+    background: #ffffff6b;
+}
+.selected{
+    background: rgb(14, 178, 93);
+}
+.occupied{
+    background: #FFA000;
+}
+.light{
+    width: 100%;
+    height: 84px;
+    background: #fffffffc;
+    margin: 30px 0;
+    box-shadow: 0 0 20px white;
+    transform: rotateX(-45deg) scale(.8);
+}
+.chooses{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+.main_column{
+    display: flex;
+}
+.main_column .column div:hover:not(.occupied){
+    background: rgb(14, 178, 93);
+    transform: scale(1.1);
+}
+#countSelecton,
+#totalPrice{
+    color: rgb(14, 178, 93);
+    font-size: 18px;
+    font-weight: 600;
+}
+.clearAll{
+    margin: 20px 0;
+    background-color: #0eb25d;
+    padding: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 30px;
+    transition-duration: .3s;
+}
+.clearAll:hover{
+    background: #ffffff6b;
+}
